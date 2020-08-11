@@ -1,0 +1,16 @@
+{
+  "name": "load-cartoon",
+  "version": "1.0.0",
+  "description": "โหลดการ์ตูนมาอ่านเล่น",
+  "main": "loadtoon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AOFIEE.DEV",
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "nodemon": "^2.0.4",
+    "puppeteer": "^5.2.1"
+  }
+}
