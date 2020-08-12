@@ -36,17 +36,14 @@ const run = async () => {
     )
     const ep = result.reverse()
     console.log(ep)
-    let index = 0
-    for (const item of ep) {
+    for (const [index, item] of ep.entries()) {
         await loadEP(page, item, index)
-        index++
     }
 }
 const loadEP = async (page, item, index) => {
     mkdirp(`./download/${index + 1}`).then(made =>
         console.log(`made directories, starting with ${made}`))
     let pageURL = item.link
-    console.log(`load ${item.link} = ${index}`)
     do {
         const options = { waitUntil: 'load', timeout: 0 }
         await page.goto(pageURL, { waitUntil: 'networkidle0' })
